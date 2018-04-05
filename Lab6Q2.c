@@ -18,7 +18,6 @@ int main(void)
 			}
 			else
 			{
-
 				LED=i<<4;
 				LPC_GPIO0->FIOPIN=LED;
 				i++;
