@@ -11,18 +11,19 @@ int main(void)
 			{
 				LED=i<<4;
 				LPC_GPIO0->FIOPIN=LED;
-				i++;
-				if(i==255)
-					i=0;
+				i--;
+				if(i<0)
+					i=255;
 				for(j=0;j<25500;j++);
 			}
 			else
 			{
+
 				LED=i<<4;
 				LPC_GPIO0->FIOPIN=LED;
-				i--;
-				if(i<0)
-					i=255;
+				i++;
+				if(i==255)
+					i=0;
 				for(j=0;j<25500;j++);
 			}
 	}
